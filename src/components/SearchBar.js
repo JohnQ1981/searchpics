@@ -4,8 +4,8 @@ class SearchBar extends React.Component {
   //   onInputChange(event) {
   //     console.log(event.target.value);
   //   }
-  state = { term: "" };
-
+  state = { term: "search here" };
+    
   render() {
     return (
       <div className="ui segment">
@@ -15,8 +15,9 @@ class SearchBar extends React.Component {
             <input
               type="text"
               value={this.state.term}
-              onChange={e => this.setState({ term: e.target.value })}
+              onChange={e => this.setState({ term: e.target.value.toUpperCase() })}
             />
+            
           </div>
         </form>
       </div>
